@@ -6,6 +6,7 @@ var Player = function(name, color, position, direction) {
     this.bullets = new Array();
     this.direction = direction;
     this.speed = 0;
+    this.isBlocked = false;
 
     this.material = new THREE.MeshLambertMaterial({
         color: color,
@@ -82,4 +83,14 @@ Player.prototype.move = function () {
     light1.position.x = this.position.x;
     light1.position.y = this.position.y;
    //light1.position.z = this.graphic.position.z + 500;
+};
+
+Player.prototype.ennemyMove = function() {
+    this.accelerate();
+    this.move();    
+    if (this.isBlocked){
+        console.log("yo");
+        this.direction *= -1;
+        this.isBlocked = false;
+    }
 };

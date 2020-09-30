@@ -60,15 +60,52 @@ function player_collision()
     //collision between player and walls
     var x = player1.graphic.position.x + WIDTH / 2;
     var y = player1.graphic.position.y + HEIGHT / 2;
+    var tmp_1 = 0;
 
-    if ( x > WIDTH )
+    if ( x > WIDTH ){
         player1.graphic.position.x -= x - WIDTH;
+        tmp_1++;
+    }
     if ( y < 0 )
+    {
         player1.graphic.position.y -= y;
-    if ( y > HEIGHT )
+        tmp_1++;
+    }
+    if ( y > HEIGHT ) {
         player1.graphic.position.y -= y - HEIGHT;
+        tmp_1++;
+    }
     if ( x < 0 )
+    {
         player1.graphic.position.x -= x;
+        tmp_1++;
+    }
+
+    x = player2.graphic.position.x + WIDTH / 2;
+    y = player2.graphic.position.y + HEIGHT / 2;
+    var tmp_2 = 0;
+
+    if ( x > WIDTH ){
+        player2.graphic.position.x -= x - WIDTH;
+        tmp_2++;
+    }
+    if ( y < 0 ){
+        player2.graphic.position.y -= y;
+        tmp_2++;
+    }
+    if ( y > HEIGHT ){
+        player2.graphic.position.y -= y - HEIGHT;
+        tmp_2++;
+    }
+    if ( x < 0 ) {
+        player2.graphic.position.x -= x;
+        tmp_2++;
+    }
+
+    player2.isBlocked = 0 != tmp_2;
+    player1.isBlocked = 0 != tmp_1;
+
+    console.log(tmp_2);
 
 }
 
