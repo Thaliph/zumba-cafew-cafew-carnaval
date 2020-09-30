@@ -24,6 +24,7 @@ function init()
 
     noGround = [];
     ground = new Ground(0xffffff, WIDTH, HEIGHT, 10);
+    player2.speed = -10;
     scene.add(player1.graphic);
     scene.add(player2.graphic);
 

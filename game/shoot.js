@@ -101,12 +101,9 @@ function player_collision()
         player2.graphic.position.x -= x;
         tmp_2++;
     }
-
-    player2.isBlocked = 0 < tmp_2;
-    player1.isBlocked = 0 < tmp_1;
-    console.log("HEIGHT: " + HEIGHT + "\nWIDTH: " + WIDTH + "\n");
-    console.log("x: " + x + "\ny: " + y + "\n");
-
+    if (tmp_2 > 0){
+        player2.speed *= -1;
+    }
 }
 
 function player_falling()

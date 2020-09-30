@@ -12,8 +12,9 @@ function update()
         player1.accelerate(moveDistance);
     if (keyboard.pressed("down"))
         player1.decelerate(moveDistance);
-    player2.accelerate(moveDistance);
-    player1.move();    
-    player2.ennemyMove();
+    var tmp_speed = player2.speed;
+    player1.move();
+    player2.move();
+    player2.speed = tmp_speed;
     controls.update();
 }
