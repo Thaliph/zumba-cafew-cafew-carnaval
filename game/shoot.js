@@ -102,10 +102,10 @@ function player_collision()
         tmp_2++;
     }
 
-    player2.isBlocked = 0 != tmp_2;
-    player1.isBlocked = 0 != tmp_1;
-
-    console.log(tmp_2);
+    player2.isBlocked = 0 < tmp_2;
+    player1.isBlocked = 0 < tmp_1;
+    console.log("HEIGHT: " + HEIGHT + "\nWIDTH: " + WIDTH + "\n");
+    console.log("x: " + x + "\ny: " + y + "\n");
 
 }
 

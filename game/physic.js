@@ -12,8 +12,8 @@ function update()
         player1.accelerate(moveDistance);
     if (keyboard.pressed("down"))
         player1.decelerate(moveDistance);
-
+    player2.accelerate(moveDistance);
     player1.move();    
-    //player2.ennemyMove();
+    player2.ennemyMove();
     controls.update();
 }
