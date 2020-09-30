@@ -28,4 +28,8 @@ A video game with three.js
 - [ ] : As a player, I want to destroy ennemy when I shot them
 - [X] : As a ennemy, I want to move on one axe
 - [ ] : As a player, I want to decrease my life when I am touch by an ennemy
-- [ ] : As a player, I want to decrease my life when I fall 
+- [ ] : As a player, I want to decrease my life when I fall
+
+En vue du travail fait je pense bien toucher les 40/100
+
+Sinon je me suis sentie paumer donc je ne vois meme pas ou on peut trouver des points... le google doc est plus facile
