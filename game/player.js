@@ -90,7 +90,6 @@ Player.prototype.ennemyMove = function() {
     this.move();    
     if (this.isBlocked){
         console.log("yo");
-        this.direction *= -1;
         this.isBlocked = false;
     }
 };
